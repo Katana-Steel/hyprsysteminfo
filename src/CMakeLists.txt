@@ -1,4 +1,6 @@
-find_package(Qt6 REQUIRED COMPONENTS WaylandClientPrivate)
+if(Qt6_VERSION VERSION_GREATER_EQUAL 6.10) 
+  find_package(Qt6 REQUIRED COMPONENTS WaylandClientPrivate)
+endif()
 
 qt_add_executable(hyprsysteminfo
     main.cpp
